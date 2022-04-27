@@ -1,0 +1,9 @@
+#card {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#device {
+  height: 400px;
+  width: 400px;
+}

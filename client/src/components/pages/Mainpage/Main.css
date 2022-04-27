@@ -1,0 +1,7 @@
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: cyan;
+  background: content-box radial-gradient(crimson, skyblue);
+}

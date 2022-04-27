@@ -1,9 +1,10 @@
 require('dotenv').config();
 const path = require('path');
 const express = require('express');
+const cors = require('cors');
 const morgan = require('morgan');
 let db = require('./db');
-const PORT = 3000;
+const PORT = 3001;
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')))
@@ -12,6 +13,13 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 app.use(morgan('dev'));
+
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  }),
+);
 
 //Получаем массив комнат
 app.get('/rooms', (req, res) => {
